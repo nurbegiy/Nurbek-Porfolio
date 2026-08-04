@@ -35,7 +35,7 @@ export const projects = [
     description: 'Mayda do‘konlar uchun qarz va sotuvlarni yozib boradigan boshqaruv dasturi.',
     tags: ['React', 'Supabase'],
     image: '/assets/projects/shop.jpg',
-    link: '#',
+    link: 'https://t.me/DukonAppbot',
   },
   {
     id: 'menu',
@@ -44,15 +44,15 @@ export const projects = [
     description: 'Restoranlar uchun QR orqali ochiladigan, taomlarni toifalarga ajratilgan raqamli menyu.',
     tags: ['React', 'Responsive'],
     image: '/assets/projects/menu.jpg',
-    link: '#',
+    link: 'https://e-oshxona.vercel.app/',
   },
   {
     id: 'old-portfolio',
     title: 'Eski portfolio',
     subtitle: 'Shaxsiy sayt',
     description: 'Ilk portfolio loyihasi — asosiy sahifa va loyihalar bo‘limi bilan.',
-    tags: ['React'],
-    image: '/assets/projects/old-portfolio.jpg',
+    tags: ['Html', 'CSS', 'JavaScript'],
+    image: '/assets/projects/tic-tac-toe.jpg',
     link: 'https://artportfolio-96uf.vercel.app/',
   },
   {
@@ -61,7 +61,7 @@ export const projects = [
     subtitle: 'Landing sahifa',
     description: 'Krasovka/oyoq kiyim brendlari uchun mahsulot kartalari bilan landing sahifa.',
     tags: ['UI', 'Landing'],
-    image: '/assets/projects/krasofka.jpg',
+    image: '/assets/projects/old-portfolio.jpg',
     link: 'https://krasofka-dizayn.vercel.app/',
   },
   {
@@ -70,7 +70,7 @@ export const projects = [
     subtitle: 'Mini o‘yin',
     description: 'JavaScript asosida yozilgan klassik X-O (tic-tac-toe) o‘yini.',
     tags: ['JavaScript', 'Game'],
-    image: '/assets/projects/tic-tac-toe.jpg',
+    image: '/assets/projects/krasofka.jpg',
     link: 'https://x-o-lik-oyini.vercel.app/',
   },
 ]

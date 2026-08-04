@@ -12,9 +12,7 @@ export default function About() {
       >
         <div className="w-full max-w-xs mx-auto md:mx-0 aspect-[4/5] rounded-[2rem] border border-cream/15 bg-ink3/60 flex items-center justify-center overflow-hidden">
           {/* TODO: <img src="/assets/about.jpg" className="w-full h-full object-cover" /> */}
-          <span className="font-mono text-xs text-cream/40 text-center px-6">
-            surat shu yerga
-          </span>
+          <img src="/assets/about.jpg" alt="Nurbek Buriyev" className="w-full h-full object-cover" />
         </div>
 
         <div>

@@ -87,12 +87,11 @@ export default function Hero() {
           className={`relative justify-self-center md:justify-self-end ${doneTyping ? 'fade-in' : 'opacity-0'}`}
           style={{ animationDelay: '0.4s' }}
         >
-          <div className="w-48 h-64 md:w-64 md:h-80 rounded-[2rem] border border-cream/15 bg-ink2/60 flex items-center justify-center overflow-hidden">
+         <div className="w-56 h-72 md:w-80 md:h-[26rem] rounded-[2rem] flex items-center justify-center overflow-hidden">
             {/* TODO: shu joyga o'z suratingizni qo'ying:
+            
                 <img src="/assets/profile.jpg" alt={profile.name} className="w-full h-full object-cover" /> */}
-            <span className="font-mono text-xs text-cream/40 text-center px-6">
-              o‘z suratingiz<br />shu yerga tushadi
-            </span>
+            <img src="/assets/profile.jpg" alt="Nurbek Buriyev" className="w-full h-full object-cover" />
           </div>
           <div className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full bg-amber/20 blur-2xl" />
         </div>
