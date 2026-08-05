@@ -25,7 +25,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         <a href="#top" className="font-mono text-mint text-sm tracking-widest">
-          NB<span className="text-cream/50">.dev</span>
+          Nurbek<span className="text-cream/50">.dev</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-wider text-cream/80">
