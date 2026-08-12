@@ -16,8 +16,16 @@ export const profile = {
 }
 
 export const skills = [
-  'HTML5', 'CSS3', 'JavaScript', 'React', 'Vite', 'Tailwind CSS',
-  'REST API', 'Git', 'Responsive Design', 'UI/UX asoslari',
+  { name: 'HTML5', level: 90 },
+  { name: 'CSS3', level: 85 },
+  { name: 'JavaScript', level: 70 },
+  { name: 'React', level: 70 },
+  { name: 'Vite', level: 70 },
+  { name: 'Tailwind CSS', level: 65 },
+  { name: 'REST API', level: 70 },
+  { name: 'Git', level: 75 },
+  { name: 'Responsive Design', level: 85 },
+  { name: 'UI/UX asoslari', level: 75 },
 ]
 
 export const strengths = [

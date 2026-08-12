@@ -1,8 +1,28 @@
+import { useEffect, useState } from 'react'
 import useReveal from '../hooks/useReveal'
 import { skills, strengths } from '../data/content'
 
 export default function Skills() {
   const ref = useReveal()
+  const [activeSkill, setActiveSkill] = useState(null)
+
+  // Modal ochiq bo'lganda ESC tugmasi bilan yopish + sahifa scrollini bloklash
+  useEffect(() => {
+    if (!activeSkill) return
+
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setActiveSkill(null)
+    }
+    document.addEventListener('keydown', onKeyDown)
+
+    const prevOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      document.body.style.overflow = prevOverflow
+    }
+  }, [activeSkill])
 
   return (
     <section id="skills" className="bg-ink px-6 py-24 md:py-32">
@@ -19,12 +39,14 @@ export default function Skills() {
           {/* Chap ustun: Skills (tugmachalar) */}
           <div className="flex flex-wrap gap-3 h-fit">
             {skills.map((s) => (
-              <span
-                key={s}
-                className="font-mono text-sm px-4 py-2 rounded-full border border-cream/15 text-cream/80 hover:border-amber hover:text-amber transition-colors cursor-default"
+              <button
+                key={s.name}
+                type="button"
+                onClick={() => setActiveSkill(s)}
+                className="font-mono text-sm px-4 py-2 rounded-full border border-cream/15 text-cream/80 hover:border-amber hover:text-amber transition-colors cursor-pointer"
               >
-                {s}
-              </span>
+                {s.name}
+              </button>
             ))}
           </div>
 
@@ -45,6 +67,52 @@ export default function Skills() {
           </div>
         </div>
       </div>
+
+      {activeSkill && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center px-6"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="skill-modal-title"
+        >
+          {/* Fon — bosilganda modal yopiladi */}
+          <div
+            className="absolute inset-0 bg-ink/80 backdrop-blur-sm fade-in"
+            onClick={() => setActiveSkill(null)}
+          />
+
+          <div className="relative bg-ink2 border border-cream/10 rounded-2xl p-8 max-w-sm w-full rise-in">
+            <button
+              type="button"
+              onClick={() => setActiveSkill(null)}
+              aria-label="Yopish"
+              className="absolute top-4 right-4 text-cream/50 hover:text-amber transition-colors text-xl leading-none"
+            >
+              ✕
+            </button>
+
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-mint mb-2">
+              Ko‘nikma
+            </p>
+            <h3 id="skill-modal-title" className="display-title text-cream text-4xl mb-6">
+              {activeSkill.name}
+            </h3>
+
+            <div className="flex items-center justify-between mb-2">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-cream/45">
+                Bilim darajasi
+              </span>
+              <span className="font-mono text-sm text-amber">{activeSkill.level}%</span>
+            </div>
+            <div className="h-2.5 w-full rounded-full bg-cream/10 overflow-hidden">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-mint to-amber transition-all duration-700 ease-out"
+                style={{ width: `${activeSkill.level}%` }}
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
