@@ -1,6 +1,3 @@
-// Barcha matn va loyihalar shu yerda — dizaynga tegmasdan
-// kontentni yangilash uchun faqat shu faylni tahrirlang.
-
 export const profile = {
   name: 'Nurbek Buriyev',
   role: 'Frontend Developer',
@@ -12,7 +9,7 @@ export const profile = {
   telegram: 'Nurbek_Buriyev',
   instagram: 'nurbegiy',
   email: 'bnurbek704@gmail.com',
-  resumeUrl: 'https://www.kickresume.com/cv/4bd5Mp/',
+  resumeUrl: 'https://docs.google.com/document/d/1Lh6gn4vSLSiRS9ZUhBEsHM4Bl-abR95n/edit',
 }
 
 export const skills = [
@@ -33,26 +30,24 @@ export const strengths = [
   'Mentorlik', 'Muloqot',
 ]
 
-// Loyihalar: rasm maydoni (image) — o'zingiz screenshot qo'shasiz,
-// src/assets/projects/ papkasiga joylang va yo'lni shu yerga yozing.
 export const projects = [
   {
     id: 'shop',
-    title: 'Do‘kon dasturi',
-    subtitle: 'Qarz daftarcha',
-    description: 'Mayda do‘konlar uchun qarz va sotuvlarni yozib boradigan boshqaruv dasturi.',
+    title: 'Cs2 bot',
+    subtitle: 'CS2 Telegram bot',
+    description: 'Juda tez rivojlanayotgan cs2 oyini uchun skinlar savdosi uchun telegram bot',
     tags: ['React', 'Supabase'],
     image: '/assets/projects/shop.jpg',
-    link: 'https://t.me/DukonAppbot',
+    link: 'https://t.me/CSSkinlarbot',
   },
   {
     id: 'menu',
-    title: 'Restoran menyusi',
-    subtitle: 'Raqamli menyu',
-    description: 'Restoranlar uchun QR orqali ochiladigan, taomlarni toifalarga ajratilgan raqamli menyu.',
+    title: 'Toy Taklifnoma',
+    subtitle: 'Taklifnoma',
+    description: 'Toyga online taklifnoma',
     tags: ['React', 'Responsive'],
     image: '/assets/projects/menu.jpg',
-    link: 'https://e-oshxona.vercel.app/',
+    link: 'https://toygataklifnoma.vercel.app/',
   },
   {
     id: 'old-portfolio',
